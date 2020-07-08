@@ -1,7 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'master'
+    }
+
+  }
   stages {
-    stage('') {
+    stage('Print') {
       steps {
         echo 'Hello'
       }
